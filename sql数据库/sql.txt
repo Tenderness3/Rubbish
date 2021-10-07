@@ -1,0 +1,46 @@
+alter table measure add ImageSize int null;
+
+添加列
+alter table t_user add work_type nvarchar(50) null;
+
+删除列
+alter table t_user drop column ImageDescription;
+
+清除表数据
+Delete from zhi_id where 1=1
+
+
+Getuser
+MHR.Model.Company_user user = MHR.BLL.Company_user.Getuser(c_com_username);
+            this.id.Value = user.Id.ToString();
+
+
+以前在之前的公司一直在做.NET开发，将近有6，7年的开发经验。现在更加倾向于前端开发
+
+CssClass="MyButton_baocun" BorderStyle="None"
+
+公司薪资：zhi_money
+公司名称 com_name
+公司类型com_type
+公司规模:com_number
+公司地址：com_province
+公司地址：com_city
+公司邮箱：com_email
+公司电话：com_phone
+招聘身份:com_card
+公司简介：com_info
+
+
+
+<% 
+                        string username_page;
+                        username_page = Session["L_I_username"].ToString();
+                        MHR.Model.User user = MHR.BLL.User.Getuser(username_page);
+                        int id_page = int.Parse(user.Id.ToString());
+                        %>
+
+MHR.JsHelper.AlertAndRedirect("发送成功！", "http://localhost:12350/dazuoye/Job_edit_求职者/整理简历.aspx");
+
+
+可以服务端发送发送端：Session["L_I_username"] = username.Text;
+接收端：username_page = Session["L_I_username"].ToString();
